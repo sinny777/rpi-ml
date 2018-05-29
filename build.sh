@@ -24,7 +24,6 @@ function install_ml_dependencies {
 
 install_build_tools
 install_node
-install_python3
 # install_ml_dependencies
 # install_app_dependencies
 # configure_ldconfig
