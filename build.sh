@@ -18,6 +18,7 @@ function install_node {
 }
 
 function install_ml_dependencies {
+  npm install -g node-gyp
   npm install -g opencv4nodejs
   npm install -g face-recognition
   # npm install -g @angular/cli@1.6.8
