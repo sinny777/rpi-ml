@@ -25,6 +25,7 @@ function install_node {
 }
 
 function install_ml_dependencies {
+  echo "<<<<<<<<<<< INSTALLING MACHINE LEARNING DEPENDENCIES >>>>>>>>>>>>> "
   npm install -g node-gyp
   npm install -g opencv4nodejs
   npm install -g face-recognition
@@ -34,7 +35,7 @@ function install_ml_dependencies {
 
 install_build_tools
 install_node
-install_ml_dependencies
+# install_ml_dependencies
 # install_app_dependencies
 # configure_ldconfig
 # build_psips
