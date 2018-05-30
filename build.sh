@@ -7,6 +7,7 @@ function install_build_tools {
   apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev
   apt-get install python3
   apt-get install python3-pip
+  apt-get install python3.4-dev
 
   update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
   update-alternatives --install /usr/bin/python python /usr/bin/python3.4 2
@@ -31,6 +32,7 @@ function install_node {
 
 function install_ml_dependencies {
   echo "<<<<<<<<<<< INSTALLING MACHINE LEARNING DEPENDENCIES >>>>>>>>>>>>> "
+  pip3 install numpy
   npm install -g opencv4nodejs
   npm install -g face-recognition
   # npm install -g @angular/cli@1.6.8
