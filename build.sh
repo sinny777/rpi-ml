@@ -7,12 +7,18 @@ function install_build_tools {
   apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev
   apt-get install python3
   apt-get install python3-pip
+
+  update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+  update-alternatives --install /usr/bin/python python /usr/bin/python3.4 2
+
 }
 
 function install_node {
   echo "<<<<<<<<<<< INSTALLING NODE JS >>>>>>>>>>>>> "
-  wget https://nodejs.org/dist/v8.9.0/node-v8.9.0-linux-armv6l.tar.gz
-  tar -xzf node-v8.9.0-linux-armv6l.tar.gz
+  # wget https://nodejs.org/dist/v8.9.0/node-v8.9.0-linux-armv6l.tar.gz
+  # tar -xzf node-v8.9.0-linux-armv6l.tar.gz
+  wget https://dal.objectstorage.open.softlayer.com/v1/AUTH_152c01ff330647bd81131826c8743add/tools/node-v8.9.0-linux-armv6l.zip
+  unzip node-v8.9.0-linux-armv6l.tar.gz
   cd node-v8.9.0-linux-armv6l/
   sudo cp -R * /usr/local/
 }
@@ -27,7 +33,7 @@ function install_ml_dependencies {
 
 install_build_tools
 install_node
-# install_ml_dependencies
+install_ml_dependencies
 # install_app_dependencies
 # configure_ldconfig
 # build_psips
