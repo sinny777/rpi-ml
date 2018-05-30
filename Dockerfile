@@ -8,8 +8,8 @@ ENV INITSYSTEM on \
   BUILD_VERSION="V1"
 
 # Updates and adds system required packages
-RUN apt-get update && apt-get install -qy wget git tar libraspberrypi-bin \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -qy wget git tar nano libraspberrypi-bin \
+    -y curl cmake libopenblas-dev libopencv-dev && rm -rf /var/lib/apt/lists/*
 
 USER root
 

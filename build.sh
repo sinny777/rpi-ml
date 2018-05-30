@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function install_build_tools {
+  echo "<<<<<<<<<<< INSTALLING BUILD TOOLS LIKE PYTHON3, PIP3 etc >>>>>>>>>>>>> "
   apt-get update
   apt-get dist-upgrade
   apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev
@@ -9,6 +10,7 @@ function install_build_tools {
 }
 
 function install_node {
+  echo "<<<<<<<<<<< INSTALLING NODE JS >>>>>>>>>>>>> "
   wget https://nodejs.org/dist/v8.9.0/node-v8.9.0-linux-armv6l.tar.gz
   tar -xzf node-v8.9.0-linux-armv6l.tar.gz
   cd node-v8.9.0-linux-armv6l/
