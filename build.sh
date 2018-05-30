@@ -22,11 +22,15 @@ function install_node {
   rm -rf node-v8.9.0-linux-armv6l.zip __MACOSX
   cd node-v8.9.0-linux-armv6l/
   sudo cp -R * /usr/local/
+
+  npm install -g node-gyp
+  npm install -g node-pre-gyp
+  npm install -g serialport
+
 }
 
 function install_ml_dependencies {
   echo "<<<<<<<<<<< INSTALLING MACHINE LEARNING DEPENDENCIES >>>>>>>>>>>>> "
-  npm install -g node-gyp
   npm install -g opencv4nodejs
   npm install -g face-recognition
   # npm install -g @angular/cli@1.6.8
