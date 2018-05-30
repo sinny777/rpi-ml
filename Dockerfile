@@ -13,9 +13,6 @@ RUN apt-get update && apt-get install -qy wget git tar unzip nano libraspberrypi
 
 USER root
 
-# Create a directory where our app will be placed
-RUN mkdir -p /usr/src/app
-
 #Change directory so that our commands run inside this new directory
 WORKDIR /root
 
