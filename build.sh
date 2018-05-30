@@ -37,9 +37,6 @@ function install_ml_dependencies {
   # ng build --dev --env=dev
 }
 
-install_build_tools
-install_node
-# install_ml_dependencies
-# install_app_dependencies
-# configure_ldconfig
-# build_psips
+# install_build_tools
+# install_node
+install_ml_dependencies

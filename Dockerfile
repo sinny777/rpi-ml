@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian
+FROM hukam/rpi-base
 
 MAINTAINER Gurvinder Singh <http://www.gurvinder.info>
 
@@ -8,8 +8,9 @@ ENV INITSYSTEM on \
   BUILD_VERSION="V1"
 
 # Updates and adds system required packages
-RUN apt-get update && apt-get install -qy wget git tar unzip nano libraspberrypi-bin \
-    -y curl cmake libopenblas-dev libopencv-dev && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get dist-upgrade -qy wget git tar unzip nano libraspberrypi-bin -y curl cmake libopenblas-dev libopencv-dev && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && apt-get dist-upgrade
 
 USER root
 

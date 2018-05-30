@@ -7,13 +7,13 @@ script:
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
 # build image
-- docker build -t hukam/rpi-base .
+- docker build -t hukam/rpi-ml .
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
     TAG=$(grep "ENV BUILD_VERSION" Dockerfile | awk 'NF>1{print $NF}')
-    docker tag hukam/rpi-base hukam/rpi-base:$BUILD_VERSION
-    docker push hukam/rpi-base:$BUILD_VERSION
-    docker push hukam/rpi-base
+    docker tag hukam/rpi-ml hukam/rpi-ml:$BUILD_VERSION
+    docker push hukam/rpi-ml:$BUILD_VERSION
+    docker push hukam/rpi-ml
   fi
