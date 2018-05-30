@@ -18,7 +18,7 @@ function install_node {
   # wget https://nodejs.org/dist/v8.9.0/node-v8.9.0-linux-armv6l.tar.gz
   # tar -xzf node-v8.9.0-linux-armv6l.tar.gz
   wget https://dal.objectstorage.open.softlayer.com/v1/AUTH_152c01ff330647bd81131826c8743add/tools/node-v8.9.0-linux-armv6l.zip
-  unzip node-v8.9.0-linux-armv6l.tar.gz
+  unzip node-v8.9.0-linux-armv6l.zip
   cd node-v8.9.0-linux-armv6l/
   sudo cp -R * /usr/local/
 }
